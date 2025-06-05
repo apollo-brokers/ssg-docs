@@ -19,6 +19,16 @@
               "quickstart",
               "faq"
             ]
+          },
+          {
+            "group": "Features",
+            "pages": [
+              "features/zapier",
+              "features/forms",
+              "features/custom-domain",
+              "features/cms",
+              "features/media"
+            ]
           }
         ]
       },

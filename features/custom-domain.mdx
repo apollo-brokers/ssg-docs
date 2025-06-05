@@ -1,0 +1,150 @@
+---
+title: 'Custom Domain'
+description: 'Use your own domain for your website'
+icon: 'globe'
+---
+
+## Custom Domain
+
+Connect your own domain to your New.Website project for a professional web presence. Instead of using the default `your-project.public.website` URL, you can use your own domain like `yourcompany.com`.
+
+<Frame>
+  <img src="/images/features/custom-domain/dashboard.png" alt="Domain Settings Interface" />
+</Frame>
+
+## How to Add a Custom Domain
+
+<Steps>
+  <Step title="Access Domain Settings">
+    1. Navigate to your project in the New.Website dashboard
+    2. Click on the **Domain** section in the left sidebar
+    3. Click the **"+ Add Domain"** button to begin the setup process
+    
+    <Frame>
+      <img src="/images/features/custom-domain/step-1.png" alt="Domain section in sidebar" />
+    </Frame>
+  </Step>
+  
+  <Step title="Enter Your Domain">
+    1. Enter your custom domain name (e.g., `my-saas-domain.com`)
+    2. The system will display the domain you've entered for confirmation
+    3. Click **Continue** to proceed
+    
+    <Frame>
+      <img src="/images/features/custom-domain/step-2.png" alt="Add Your Domain modal" />
+    </Frame>
+  </Step>
+  
+  <Step title="Configure DNS Settings">
+    Once you've added your domain, you'll need to configure your DNS settings with your domain provider (GoDaddy, Namecheap, Cloudflare, etc.).
+
+    **DNS Configuration Required:**
+
+    | Type | Name | Value | TTL |
+    |------|------|-------|-----|
+    | A | @ | 76.76.21.21 | 300 |
+  </Step>
+  
+  <Step title="Update DNS with Your Provider">
+    1. Log into your domain registrar's control panel
+    2. Navigate to DNS management or DNS settings
+    3. Add an A record with the values shown in the table above:
+       - **Type**: A
+       - **Name**: @ (or leave blank for root domain)
+       - **Value**: 76.76.21.21
+       - **TTL**: 300 (or the lowest available value)
+    
+    <Frame>
+      <img src="/images/features/custom-domain/step-4.png" alt="DNS configuration example in Cloudflare" />
+    </Frame>
+    
+    This example shows how it looks in Cloudflare.com. Other domain providers like Namecheap or GoDaddy will have similar interfaces but may look different.
+  </Step>
+  
+  <Step title="Verify Your Domain">
+    1. After updating your DNS settings, return to the New.Website dashboard
+    2. Click the **"Verify Domain"** button
+    3. The verification process may take up to 12 hours due to DNS propagation
+  </Step>
+  
+  <Step title="Finished">
+    Once verification is complete, your domain should have a "Verified" badge next to it, indicating it's working properly.
+  </Step>
+</Steps>
+
+<Note>
+  **DNS Propagation**: Domain changes can take up to 12 hours to propagate globally. If verification fails initially, wait a few hours and try again.
+</Note>
+
+<Warning>
+  If a TTL value of 300 is not available with your DNS provider, choose the lowest available value to speed up propagation.
+</Warning>
+
+## Troubleshooting
+
+### Domain Not Verifying
+
+- **Wait for propagation**: DNS changes can take up to 12 hours
+- **Check DNS settings**: Ensure the A record is correctly configured
+- **Clear DNS cache**: Try accessing your domain from an incognito/private browser window
+- **Contact support**: If issues persist after 24 hours, contact support at hello@new.website
+
+### Subdomain Setup
+
+If you want to use a subdomain (like `app.yourcompany.com`), use the subdomain name instead of `@` in the Name field when setting up your DNS A record.
+
+## Domain Management
+
+Once verified, you can:
+- **Remove domains**: Click the "Remove Domain" button to disconnect a domain
+- **Add multiple domains**: Connect multiple domains to the same project
+- **Monitor status**: See verification status with the "Verified" badge
+
+<Tip>
+  Consider setting up both the www and non-www versions of your domain by adding both `yourcompany.com` and `www.yourcompany.com` as separate domain entries.
+</Tip>
+
+## Frequently Asked Questions
+
+<AccordionGroup>
+  <Accordion title="Can I purchase a domain through New.Website?">
+    No, New.Website doesn't sell domains. You'll need to purchase your domain from a domain registrar like GoDaddy, Namecheap, Cloudflare, or any other domain provider. Once you own the domain, you can connect it to your New.Website project.
+  </Accordion>
+
+  <Accordion title="How do I remove a custom domain?">
+    To remove a custom domain:
+    1. Go to your project dashboard
+    2. Navigate to the Domain section
+    3. Find the domain you want to remove
+    4. Click the "Remove Domain" button next to it
+    5. Confirm the removal when prompted
+  </Accordion>
+
+  <Accordion title="Which plan supports custom domains?">
+    Custom domains are included with the $25 paid plan. There are no additional fees from New.Website for using custom domains - you only pay for the domain registration fee to your domain provider.
+  </Accordion>
+
+  <Accordion title="Can I use multiple custom domains for one project?">
+    Yes, you can connect multiple domains to the same project. 
+  </Accordion>
+
+  <Accordion title="How long does domain verification take?">
+    Domain verification is usually instant once DNS propagation is complete. However, DNS propagation can take anywhere from a few minutes to 12 hours, depending on your domain provider and global DNS cache updates.
+  </Accordion>
+
+  <Accordion title="Can I use a subdomain instead of a root domain?">
+    Yes, you can use subdomains like `app.yourcompany.com` or `blog.yourcompany.com`. When setting up the DNS record, use the subdomain name (like `app`) instead of `@` in the Name field.
+  </Accordion>
+
+  <Accordion title="My domain isn't working even after 24 hours. What should I do?">
+    If your domain still isn't working after 24 hours:
+    1. Double-check your DNS settings to ensure they match exactly:
+       - **Type**: A
+       - **Name**: @ (or blank for root domain)
+       - **Value**: 76.76.21.21
+       - **TTL**: 300 (or lowest available)
+    2. Use a DNS checker tool like whatsmydns.net to verify your DNS records are propagated globally
+    3. Try clearing your browser cache or testing from an incognito window
+    4. If everything looks correct but it's still not working, contact our support team at hello@new.website with your domain name and we'll investigate further
+  </Accordion>
+</AccordionGroup>
