@@ -3,9 +3,9 @@
   "theme": "maple",
   "name": "New.Website",
   "colors": {
-    "primary": "#0f172b",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#8200DA",
+    "light": "#8200DA",
+    "dark": "#8200DA"
   },
   "navigation": {
     "tabs": [
