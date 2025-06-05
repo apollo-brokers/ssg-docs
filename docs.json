@@ -10,18 +10,24 @@
   "navigation": {
     "dropdowns": [
       {
-        "dropdown": "Documentation",
+        "dropdown": "Guides",
         "icon": "book-open",
-        "pages": [
-          "quickstart",
-          "development",
-          "navigation"
+        "groups": [
+          {
+            "group": "Getting Started",
+            "pages": [
+              "quickstart",
+              "faq"
+            ]
+          }
         ]
       },
       {
         "dropdown": "Changelog",
-        "icon": "rotate-ccw",
-        "href": "https://external-link.com/blog"
+        "icon": "clock",
+        "pages": [
+          "changelog"
+        ]
       }
     ]
   },
