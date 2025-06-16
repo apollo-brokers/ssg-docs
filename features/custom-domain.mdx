@@ -36,23 +36,20 @@ Connect your own domain to your new.website project for a professional web prese
   </Step>
   
   <Step title="Configure DNS Settings">
-    Once you've added your domain, you'll need to configure your DNS settings with your domain provider (GoDaddy, Namecheap, Cloudflare, etc.).
+    Once you've added your domain, the dashboard will display the DNS configuration you need to set up with your domain provider.
 
-    **DNS Configuration Required:**
+    <Frame>
+      <img src="/images/features/custom-domain/step-3.png" alt="DNS configuration values shown in dashboard" />
+    </Frame>
 
-    | Type | Name | Value | TTL |
-    |------|------|-------|-----|
-    | A | @ | 76.76.21.21 | 300 |
-  </Step>
-  
-  <Step title="Update DNS with Your Provider">
-    1. Log into your domain registrar's control panel
-    2. Navigate to DNS management or DNS settings
-    3. Add an A record with the values shown in the table above:
-       - **Type**: A
-       - **Name**: @ (or leave blank for root domain)
-       - **Value**: 76.76.21.21
-       - **TTL**: 300 (or the lowest available value)
+    1. Check the DNS configuration table shown in your dashboard - it will display the specific record type (A or CNAME), name, value, and TTL based on your domain type
+    2. Log into your domain registrar's control panel (GoDaddy, Namecheap, Cloudflare, etc.)
+    3. Navigate to DNS management or DNS settings
+    4. Add the DNS record exactly as shown in your dashboard:
+       - Use the **Type** displayed (A record for root domains, CNAME for subdomains)
+       - Use the **Name** value shown
+       - Use the **Value** provided in your dashboard
+       - Set **TTL** as shown (or use the lowest available value if the exact TTL isn't available)
     
     <Frame>
       <img src="/images/features/custom-domain/step-4.png" alt="DNS configuration example in Cloudflare" />
