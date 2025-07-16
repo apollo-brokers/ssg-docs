@@ -28,7 +28,8 @@
               "features/forms",
               "features/custom-domain",
               "features/cms",
-              "features/media"
+              "features/media",
+              "features/team"
             ]
           }
         ]
