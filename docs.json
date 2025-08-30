@@ -29,7 +29,9 @@
               "features/custom-domain",
               "features/cms",
               "features/media",
-              "features/team"
+              "features/team",
+              "features/seo",
+              "features/github-sync"
             ]
           }
         ]
